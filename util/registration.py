@@ -21,7 +21,7 @@ class Registrtion():
         Registrtion.browser_driver = driver
 
     @staticmethod
-    def chek(dict_reg):
+    def check(dict_reg):
         if not Registrtion.browser_driver:
             Registrtion.browser()
         driver = Registrtion.browser_driver

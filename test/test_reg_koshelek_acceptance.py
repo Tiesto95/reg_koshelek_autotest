@@ -15,7 +15,7 @@ class TestRegKoshelekAcceptance():
             'acceptance': False
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя без принятия условий пользовательского соглашения."
         print(descr_test)
         expected_result = '$checkboxErrorDark'

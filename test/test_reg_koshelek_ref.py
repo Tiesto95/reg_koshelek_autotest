@@ -15,7 +15,7 @@ class TestRegKoshelekRef():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя с указанием реф. ссылки менее 4 символов"
         print(descr_test)
         expected_result = 'Неверный формат ссылки'
@@ -33,7 +33,7 @@ class TestRegKoshelekRef():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя с указанием реф. ссылки более 8 символов"
         print(descr_test)
         expected_result = 'Неверный формат ссылки'

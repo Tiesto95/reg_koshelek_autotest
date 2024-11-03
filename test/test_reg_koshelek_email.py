@@ -15,7 +15,7 @@ class TestRegKoshelekEmail():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя не указав E-mail."
         print(descr_test)
         expected_result = "Поле не заполнено"
@@ -33,7 +33,7 @@ class TestRegKoshelekEmail():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя с указанием E-mail несоответствующего формата (без @)."
         print(descr_test)
         expected_result = 'Формат e-mail: username@test.ru'
@@ -51,7 +51,7 @@ class TestRegKoshelekEmail():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя с указанием E-mail несоответствующего формата (без указания домена первого уровня.)."
         print(descr_test)
         expected_result = 'Формат e-mail: username@test.ru'

@@ -15,7 +15,7 @@ class TestRegKoshelekPass():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя без указания пароля."
         print(descr_test)
         expected_result = 'Поле не заполнено'
@@ -33,7 +33,7 @@ class TestRegKoshelekPass():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя длиной пароля менее 8 символов."
         print(descr_test)
         expected_result = 'Пароль должен содержать минимум 8 символов'
@@ -51,7 +51,7 @@ class TestRegKoshelekPass():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя длиной пароля более 64 символов."
         print(descr_test)
         expected_result = 'Пароль должен содержать от 8 до 64 символов, включая заглавные буквы и цифры'
@@ -69,7 +69,7 @@ class TestRegKoshelekPass():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя длиной пароля без заглавной буквы."
         print(descr_test)
         expected_result = 'Пароль должен содержать от 8 до 64 символов, включая заглавные буквы и цифры'
@@ -87,7 +87,7 @@ class TestRegKoshelekPass():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя длиной пароля без цифры."
         print(descr_test)
         expected_result = 'Пароль должен содержать от 8 до 64 символов, включая заглавные буквы и цифры'

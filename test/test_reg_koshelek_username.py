@@ -14,7 +14,7 @@ class TestRegKoshelekUserName():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя с именем меньше 6 символов."
         print(descr_test)
         expected_result = 'Допустимые символы (от 6 до 32): a-z, 0-9, _. Имя должно начинаться с буквы'
@@ -32,7 +32,7 @@ class TestRegKoshelekUserName():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя с именем больше 32 символов."
         print(descr_test)
         expected_result = 'Допустимые символы (от 6 до 32): a-z, 0-9, _. Имя должно начинаться с буквы'
@@ -50,7 +50,7 @@ class TestRegKoshelekUserName():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя с именем на кириллице."
         print(descr_test)
         expected_result = 'Допустимые символы (от 6 до 32): a-z, 0-9, _. Имя должно начинаться с буквы'
@@ -68,7 +68,7 @@ class TestRegKoshelekUserName():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя с использованием спец. символов при написании имени пользователя."
         print(descr_test)
         expected_result = 'Допустимые символы (от 6 до 32): a-z, 0-9, _. Имя должно начинаться с буквы'
@@ -86,7 +86,7 @@ class TestRegKoshelekUserName():
             'acceptance': True
         }
 
-        response = Registrtion.chek(dict_reg)
+        response = Registrtion.check(dict_reg)
         descr_test = "Проверка регистрации нового пользователя оставив пустым поле имя пользователя."
         print(descr_test)
         expected_result = 'Поле не заполнено'
@@ -106,7 +106,7 @@ class TestRegKoshelekUserName():
     #         'acceptance': True
     #     }
 
-    #     response = Registrtion.chek(dict_reg)
+    #     response = Registrtion.check(dict_reg)
         # descr_test = "Проверка регистрации нового пользователя c именем уже зарегистрированного пользователя."
         # print(descr_test)
         # expected_result = 'Имя пользователя уже занято'
