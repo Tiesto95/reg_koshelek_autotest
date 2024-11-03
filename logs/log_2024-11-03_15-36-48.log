@@ -1,0 +1,128 @@
+
+-----
+Test: Тестирование Checkbox поля (принятия пользовательского соглашения).
+Time: 2024-11-03 15:36:54.903002
+description: Проверка регистрации нового пользователя без принятия условий пользовательского соглашения.
+Test data: {'user_name': 'beslan2026', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaconda2024@', 'ref': 'mzbd', 'acceptance': False}
+Response data: {'user_name': '', 'email': '', 'pass': '', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxErrorDark"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода электронной почты(Email).
+Time: 2024-11-03 15:36:56.730467
+description: Проверка регистрации нового пользователя не указав E-mail.
+Test data: {'user_name': 'beslan2026', 'email': '', 'pass': 'Anaconda2024@', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': '', 'email': 'Поле не заполнено', 'pass': '', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода электронной почты(Email).
+Time: 2024-11-03 15:36:58.928758
+description: Проверка регистрации нового пользователя с указанием E-mail несоответствующего формата (без @).
+Test data: {'user_name': 'beslan2026', 'email': 'beslan-2010mail.ru', 'pass': 'Anaconda2024@', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': '', 'email': 'Формат e-mail: username@test.ru', 'pass': '', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода электронной почты(Email).
+Time: 2024-11-03 15:37:00.800360
+description: Проверка регистрации нового пользователя с указанием E-mail несоответствующего формата (без указания домена первого уровня.).
+Test data: {'user_name': 'beslan2026', 'email': 'beslan-2010@mail', 'pass': 'Anaconda2024@', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': '', 'email': 'Формат e-mail: username@test.ru', 'pass': '', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода пароля пользователя.
+Time: 2024-11-03 15:37:02.644539
+description: Проверка регистрации нового пользователя без указания пароля.
+Test data: {'user_name': 'beslan2026', 'email': 'beslan-2010@mail.ru', 'pass': '', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': '', 'email': '', 'pass': 'Поле не заполнено', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода пароля пользователя.
+Time: 2024-11-03 15:37:04.728971
+description: Проверка регистрации нового пользователя длиной пароля менее 8 символов.
+Test data: {'user_name': 'beslan2026', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaco2@', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': '', 'email': '', 'pass': 'Пароль должен содержать минимум 8 символов', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода пароля пользователя.
+Time: 2024-11-03 15:37:06.853754
+description: Проверка регистрации нового пользователя длиной пароля более 64 символов.
+Test data: {'user_name': 'beslan2026', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaconda2024@Anaconda2024@Anaconda2024@Anaconda2024@Anaconda2024@', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': '', 'email': '', 'pass': 'Пароль должен содержать от 8 до 64 символов, включая заглавные буквы и цифры', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода пароля пользователя.
+Time: 2024-11-03 15:37:08.762740
+description: Проверка регистрации нового пользователя длиной пароля без заглавной буквы.
+Test data: {'user_name': 'beslan2026', 'email': 'beslan-2010@mail.ru', 'pass': 'anaconda2024', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': '', 'email': '', 'pass': 'Пароль должен содержать от 8 до 64 символов, включая заглавные буквы и цифры', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода пароля пользователя.
+Time: 2024-11-03 15:37:11.158201
+description: Проверка регистрации нового пользователя длиной пароля без цифры.
+Test data: {'user_name': 'beslan2026', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaconda', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': '', 'email': '', 'pass': 'Пароль должен содержать от 8 до 64 символов, включая заглавные буквы и цифры', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода реф. ссылки
+Time: 2024-11-03 15:37:14.131961
+description: Проверка регистрации нового пользователя с указанием реф. ссылки менее 4 символов
+Test data: {'user_name': 'beslan2026', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaconda2024@', 'ref': 'mzb', 'acceptance': True}
+Response data: {'user_name': '', 'email': '', 'pass': '', 'ref': 'Неверный формат ссылки', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода реф. ссылки
+Time: 2024-11-03 15:37:17.287253
+description: Проверка регистрации нового пользователя с указанием реф. ссылки более 8 символов
+Test data: {'user_name': 'beslan2026', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaconda2024@', 'ref': 'mzbnadefd', 'acceptance': True}
+Response data: {'user_name': '', 'email': '', 'pass': '', 'ref': 'Неверный формат ссылки', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода имени пользователя.
+Time: 2024-11-03 15:37:19.538306
+description: Проверка регистрации нового пользователя с именем меньше 6 символов.
+Test data: {'user_name': 'besla', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaconda2024@', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': 'Допустимые символы (от 6 до 32): a-z, 0-9, _. Имя должно начинаться с буквы', 'email': '', 'pass': '', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода имени пользователя.
+Time: 2024-11-03 15:37:21.748315
+description: Проверка регистрации нового пользователя с именем больше 32 символов.
+Test data: {'user_name': 'beslanzaurbaevbeslabeslanzaurbaev', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaconda2024@', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': 'Допустимые символы (от 6 до 32): a-z, 0-9, _. Имя должно начинаться с буквы', 'email': '', 'pass': '', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода имени пользователя.
+Time: 2024-11-03 15:37:23.903348
+description: Проверка регистрации нового пользователя с именем на кириллице.
+Test data: {'user_name': 'Беслан', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaconda2024@', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': 'Допустимые символы (от 6 до 32): a-z, 0-9, _. Имя должно начинаться с буквы', 'email': '', 'pass': '', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода имени пользователя.
+Time: 2024-11-03 15:37:26.084867
+description: Проверка регистрации нового пользователя с использованием спец. символов при написании имени пользователя.
+Test data: {'user_name': 'Beslan$#', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaconda2024@', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': 'Допустимые символы (от 6 до 32): a-z, 0-9, _. Имя должно начинаться с буквы', 'email': '', 'pass': '', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
+
+-----
+Test: Тестирование поля ввода имени пользователя.
+Time: 2024-11-03 15:37:28.521052
+description: Проверка регистрации нового пользователя оставив пустым поле имя пользователя.
+Test data: {'user_name': '', 'email': 'beslan-2010@mail.ru', 'pass': 'Anaconda2024@', 'ref': 'mzbd', 'acceptance': True}
+Response data: {'user_name': 'Поле не заполнено', 'email': '', 'pass': '', 'ref': 'Реферальный код дает скидку', 'acceptance': '<svg class="v-icon__svg theme--light"><use href="#system--default--$checkboxOnNew"></use></svg>'}
+Результат теста: Пройден
