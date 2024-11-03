@@ -2,7 +2,7 @@
 
 1) Создайте виртуальное окружение:
 
-python3 -m venv myautotest
+python -m venv myautotest
 
 2) Активируйте созданное окружение:
 
