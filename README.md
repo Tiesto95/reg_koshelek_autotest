@@ -14,7 +14,7 @@ cd myautotest
 
 4) Склонируйте репозиторий в окружение командой:
 
-git clone git@github.com:Tiesto95/reg_koshelek_autotest.git
+git clone https://github.com/Tiesto95/reg_koshelek_autotest.git
 
 Либо создайте папку, скачайте архив и разархивируйте приложение в папку.
 
