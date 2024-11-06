@@ -22,7 +22,7 @@ git clone https://github.com/Tiesto95/reg_koshelek_autotest.git
    
 cd reg_koshelek_autotest
 
-7) При необходимости обновите pip:
+6) При необходимости обновите pip:
 
 python.exe -m pip install --upgrade pip
 
